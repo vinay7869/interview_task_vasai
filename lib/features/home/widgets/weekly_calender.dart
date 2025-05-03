@@ -14,6 +14,7 @@ class WeeklyCalender extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 5),
       color: Colors.white,
       padding: EdgeInsets.symmetric(
         vertical: mq.height * 0.02,

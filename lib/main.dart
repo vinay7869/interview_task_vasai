@@ -18,6 +18,19 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'DM Sans',
         scaffoldBackgroundColor: Color(0xffF6F6F8),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true,
+          // shape: RoundedRectangleBorder(
+          //   borderRadius: BorderRadius.only(
+          //     bottomLeft: Radius.circular(20),
+          //     bottomRight: Radius.circular(20),
+          //   ),
+          // ),
+          iconTheme: IconThemeData(color: Colors.white),
+          titleTextStyle: TextStyle(fontSize: 20, color: Colors.white),
+        ),
       ),
       home: TabsScreen(),
     );
