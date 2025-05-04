@@ -56,7 +56,10 @@ class _HolidayScreenState extends State<HolidayScreen> {
                   //
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: mq.width * 0.05),
-                    child: DottedHorizontalDivider(dashWidth: 10),
+                    child: DottedHorizontalDivider(
+                      dashSpacing: 10,
+                      dashWidth: 10,
+                    ),
                   ),
                   //
                   SizedBox(height: 10),
@@ -94,7 +97,10 @@ class _HolidayScreenState extends State<HolidayScreen> {
                   //
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: mq.width * 0.05),
-                    child: DottedHorizontalDivider(dashWidth: 10),
+                    child: DottedHorizontalDivider(
+                      dashSpacing: 10,
+                      dashWidth: 10,
+                    ),
                   ),
                   //
                   SizedBox(height: 10),

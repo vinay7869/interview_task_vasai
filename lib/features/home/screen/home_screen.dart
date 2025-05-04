@@ -11,7 +11,7 @@ import 'package:interview_task_vasai/features/home/widgets/graph_card.dart';
 import 'package:interview_task_vasai/features/home/widgets/todays_attendance_card.dart';
 import 'package:interview_task_vasai/features/home/widgets/weekly_calender.dart';
 import 'package:interview_task_vasai/features/salary_overview/screen/salary_overview.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
+import 'package:interview_task_vasai/helpers/dotted_divider.dart';
 import 'package:interview_task_vasai/main.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -131,11 +131,13 @@ class _HomeScreenState extends State<HomeScreen>
                     ),
 
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Image.asset(
-                        '$imagePath/divider.png',
-                        height: mq.height * .045,
-                        color: Colors.grey,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: mq.width * .05,
+                        vertical: mq.height * .025,
+                      ),
+                      child: DottedHorizontalDivider(
+                        dashSpacing: 10,
+                        dashWidth: 10,
                       ),
                     ),
 
@@ -144,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen>
                       height:
                           _currentIndex == 0 || _currentIndex == 1
                               ? mq.height * 0.26
-                              : mq.height * 0.38,
+                              : mq.height * 0.33,
                       child: TabBarView(
                         controller: _tabController,
                         children: [

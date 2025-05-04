@@ -32,10 +32,13 @@ class CustomHolidayTile extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: Colors.blue.withAlpha(17),
                 ),
-                child: Image.asset(
-                  '$iconPath/leaves.png',
-                  color: Colors.blue,
-                  fit: BoxFit.contain,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Image.asset(
+                    '$iconPath/leaves.png',
+                    color: Colors.blue,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
               SizedBox(width: 10),

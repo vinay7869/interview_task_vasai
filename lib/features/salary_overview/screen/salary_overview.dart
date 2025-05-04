@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/features/salary_overview/widgets/pie_chart.dart';
+import 'package:interview_task_vasai/features/salary_overview/widgets/pie_chart_container.dart';
+import 'package:interview_task_vasai/features/salary_overview/widgets/salary_slip_container.dart';
 
-class SalaryOverview extends StatelessWidget {
+class SalaryOverview extends StatefulWidget {
   const SalaryOverview({super.key});
 
+  @override
+  State<SalaryOverview> createState() => _SalaryOverviewState();
+}
+
+class _SalaryOverviewState extends State<SalaryOverview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,13 +29,18 @@ class SalaryOverview extends StatelessWidget {
           child: AppBar(title: const Text('Salary Overview')),
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(top: 70),
-            child: SizedBox(height: 100, child: HalfPieChart()),
-          ),
-        ],
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.only(bottom: 10),
+        child: Column(
+          children: [
+            // uppper container
+            PieChartContainer(),
+
+            //lower container
+            SalarySlipContainer(),
+          ],
+        ),
       ),
     );
   }

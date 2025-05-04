@@ -28,6 +28,7 @@ class CustomDocumentsTile extends StatelessWidget {
               Container(
                 width: mq.width * .1,
                 margin: EdgeInsets.only(right: 10),
+                padding: EdgeInsets.only(top: 4),
                 decoration: BoxDecoration(shape: BoxShape.circle),
                 child: Image.asset(
                   '$iconPath/folder_icon.png',
@@ -70,7 +71,7 @@ class CustomDocumentsTile extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 8, top: 4),
+                  padding: const EdgeInsets.only(right: 3, top: 4),
                   child: Icon(Icons.more_vert),
                 ),
               ),

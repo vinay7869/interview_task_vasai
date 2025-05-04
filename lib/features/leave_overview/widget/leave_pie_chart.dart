@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:interview_task_vasai/helpers/global.dart';
 
-class HalfPieChart extends StatelessWidget {
-  const HalfPieChart({super.key});
+class LeavePieChart extends StatelessWidget {
+  const LeavePieChart({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,38 +18,32 @@ class HalfPieChart extends StatelessWidget {
           centerSpaceRadius: 110.0,
           sections: [
             PieChartSectionData(
-              value: 40,
+              value: 10,
               color: pieGreen,
               showTitle: false,
               radius: 32,
             ),
             PieChartSectionData(
-              value: 7,
+              value: 10,
               color: pieBlue,
               showTitle: false,
               radius: 32,
             ),
             PieChartSectionData(
-              value: 7,
+              value: 10,
               color: pieOrange,
               showTitle: false,
               radius: 32,
             ),
             PieChartSectionData(
-              value: 7,
+              value: 10,
               color: pieRed,
-              showTitle: false,
-              radius: 32,
-            ),
-            PieChartSectionData(
-              value: 7,
-              color: piePink,
               showTitle: false,
               radius: 32,
             ),
 
             PieChartSectionData(
-              value: 67,
+              value: 39,
               color: Colors.transparent,
               showTitle: false,
               radius: 32,

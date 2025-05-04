@@ -1,6 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/custom_text_button.dart';
+import 'package:interview_task_vasai/features/leave_overview/screen/leave_overview.dart';
+import 'package:interview_task_vasai/helpers/dotted_divider.dart';
 import 'package:interview_task_vasai/helpers/global.dart';
 import 'package:interview_task_vasai/main.dart';
 
@@ -127,14 +129,12 @@ class CustomBarGraph extends StatelessWidget {
           ),
         ),
 
-        //
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Image.asset(
-            '$imagePath/divider.png',
-            height: mq.height * .045,
-            color: Colors.grey,
+          padding: EdgeInsets.symmetric(
+            horizontal: mq.width * .05,
+            vertical: mq.height * .025,
           ),
+          child: DottedHorizontalDivider(dashSpacing: 10, dashWidth: 10),
         ),
 
         //
@@ -234,7 +234,15 @@ class CustomBarGraph extends StatelessWidget {
             top: mq.height * 0.01,
             bottom: mq.height * 0.02,
           ),
-          child: CustomTextButton(title: 'VIEW DETAILS', onTap: () {}),
+          child: CustomTextButton(
+            title: 'VIEW DETAILS',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LeaveOverview()),
+              );
+            },
+          ),
         ),
       ],
     );

@@ -86,13 +86,8 @@ class _TabsScreenState extends State<TabsScreen> {
       floatingActionButton: FloatingActionButton(
         elevation: 0,
         backgroundColor: Color(0xffF6F6F8),
-        child: Image.asset(
-          'assets/images/scan.png',
-          fit: BoxFit.cover,
-          height: 90,
-          width: 90,
-        ),
-        onPressed: () => setState(() => _page = 2),
+        child: Image.asset('assets/images/scan.png', fit: BoxFit.cover),
+        onPressed: () {},
       ),
     );
   }
