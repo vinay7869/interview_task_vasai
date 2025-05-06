@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/salary_overview/widgets/pie_chart.dart';
 import 'package:interview_task_vasai/helpers/global.dart';
-import 'package:interview_task_vasai/main.dart';
 
 class PieChartContainer extends StatefulWidget {
   const PieChartContainer({super.key});

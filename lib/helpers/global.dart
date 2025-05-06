@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+late Size mq;
+
 const imagePath = 'assets/images';
 //
 const iconPath = 'assets/icons';

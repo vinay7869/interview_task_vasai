@@ -12,7 +12,7 @@ import 'package:interview_task_vasai/features/home/widgets/todays_attendance_car
 import 'package:interview_task_vasai/features/home/widgets/weekly_calender.dart';
 import 'package:interview_task_vasai/features/salary_overview/screen/salary_overview.dart';
 import 'package:interview_task_vasai/helpers/dotted_divider.dart';
-import 'package:interview_task_vasai/main.dart';
+import 'package:interview_task_vasai/helpers/global.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

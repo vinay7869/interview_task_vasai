@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/bar_graph.dart';
-import 'package:interview_task_vasai/main.dart';
+import 'package:interview_task_vasai/helpers/global.dart';
 
 class GraphCard extends StatelessWidget {
   const GraphCard({super.key});

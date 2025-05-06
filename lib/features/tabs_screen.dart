@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/screen/home_screen.dart';
 import 'package:interview_task_vasai/features/profile/screen/profile_screen.dart';
+import 'package:interview_task_vasai/helpers/global.dart';
 import 'package:interview_task_vasai/helpers/tabs_app_bar.dart';
-import 'package:interview_task_vasai/main.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -41,15 +41,16 @@ class _TabsScreenState extends State<TabsScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(
-                      Icons.home,
-                      color: _page == 0 ? Colors.blue : Colors.black,
+                    Image.asset(
+                      '$iconPath/home.png',
+                      width: mq.width * .066,
+                      color: _page == 0 ? Colors.blue : lightTxtColor,
                     ),
                     SizedBox(height: mq.height * .004),
                     Text(
                       'HOME',
                       style: TextStyle(
-                        color: _page == 0 ? Colors.blue : Colors.black,
+                        color: _page == 0 ? Colors.blue : lightTxtColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -63,15 +64,16 @@ class _TabsScreenState extends State<TabsScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(
-                      Icons.person_2_outlined,
-                      color: _page == 1 ? Colors.blue : Colors.black,
+                    Image.asset(
+                      '$iconPath/profile.png',
+                      width: mq.width * .06,
+                      color: _page == 1 ? Colors.blue : lightTxtColor,
                     ),
                     SizedBox(height: mq.height * .004),
                     Text(
                       'PROFILE',
                       style: TextStyle(
-                        color: _page == 1 ? Colors.blue : Colors.black,
+                        color: _page == 1 ? Colors.blue : lightTxtColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

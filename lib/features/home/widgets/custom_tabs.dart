@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/main.dart';
+import 'package:interview_task_vasai/helpers/global.dart';
 
 class CustomTabs extends StatelessWidget {
   final String title;

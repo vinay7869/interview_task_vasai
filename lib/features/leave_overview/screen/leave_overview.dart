@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:interview_task_vasai/features/leave_overview/widget/custom_bottom_sheet.dart';
 import 'package:interview_task_vasai/features/leave_overview/widget/leave_pie_chart.dart';
-import 'package:interview_task_vasai/main.dart';
+import 'package:interview_task_vasai/features/leave_overview/widget/leave_status_card.dart';
+import 'package:interview_task_vasai/features/leave_overview/widget/month_selecter.dart';
+import 'package:interview_task_vasai/features/leave_overview/widget/pie_data_card.dart';
+import 'package:interview_task_vasai/helpers/dotted_divider.dart';
+import 'package:interview_task_vasai/helpers/global.dart';
 
 class LeaveOverview extends StatefulWidget {
   const LeaveOverview({super.key});
@@ -10,22 +15,6 @@ class LeaveOverview extends StatefulWidget {
 }
 
 class _LeaveOverviewState extends State<LeaveOverview> {
-  String selectedMonth = 'September';
-  final List<String> months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +35,7 @@ class _LeaveOverviewState extends State<LeaveOverview> {
         ),
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             Container(
@@ -68,56 +58,77 @@ class _LeaveOverviewState extends State<LeaveOverview> {
                       ),
 
                       // Month Dropdown
-                      Container(
-                        height: mq.height * 0.04,
-                        width: mq.width * 0.335,
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: const Color(0xff3B82F6)),
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: DropdownButtonHideUnderline(
-                          child: DropdownButton<String>(
-                            isExpanded: true,
-                            isDense: true,
-                            value: selectedMonth,
-                            items:
-                                months
-                                    .map(
-                                      (month) => DropdownMenuItem<String>(
-                                        value: month,
-                                        child: Text(
-                                          month,
-                                          style: const TextStyle(
-                                            color: Color(0xff3B82F6),
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                    .toList(),
-                            onChanged: (value) {
-                              setState(() {
-                                selectedMonth = value!;
-                              });
-                            },
-                            icon: const Icon(
-                              Icons.arrow_drop_down,
-                              color: Color(0xff3B82F6),
-                            ),
-                          ),
-                        ),
-                      ),
+                      MonthSelecter(),
                     ],
                   ),
 
+                  //  pie circle
                   Container(
                     color: Colors.white,
                     height: mq.height * .2,
                     padding: EdgeInsets.only(top: mq.height * .22),
                     child: LeavePieChart(),
                   ),
+
+                  //
+                  PieDataCard(),
+                ],
+              ),
+            ),
+
+            //
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.white,
+              padding: EdgeInsets.symmetric(horizontal: mq.width * 0.05),
+              child: Column(
+                children: [
+                  //
+                  Padding(
+                    padding: EdgeInsets.only(top: mq.height * .02),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          'Leaves',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+
+                        InkWell(
+                          onTap: () {
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) {
+                                return CustomBottomSheet();
+                              },
+                            );
+                          },
+                          child: Image.asset(
+                            '$iconPath/filter_icon.png',
+                            width: mq.width * .07,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  //
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: mq.width * .01,
+                      vertical: mq.height * .025,
+                    ),
+                    child: DottedHorizontalDivider(
+                      dashSpacing: 10,
+                      dashWidth: 10,
+                    ),
+                  ),
+
+                  //
+                  ...List.generate(3, (index) => LeaveStatusCard()),
                 ],
               ),
             ),

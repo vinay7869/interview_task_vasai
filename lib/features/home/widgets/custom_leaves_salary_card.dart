@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/custom_text_button.dart';
 import 'package:interview_task_vasai/helpers/global.dart';
-import 'package:interview_task_vasai/main.dart';
 
 class CustomLeavesSalaryCard extends StatelessWidget {
   final String heading, value, title1, title2, title3, value1, value2, value3;

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/custom_documents_tile.dart';
 import 'package:interview_task_vasai/helpers/dotted_divider.dart';
 import 'package:interview_task_vasai/helpers/global.dart';
-import 'package:interview_task_vasai/main.dart';
 
 class SalarySlipContainer extends StatelessWidget {
   const SalarySlipContainer({super.key});

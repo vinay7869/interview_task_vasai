@@ -4,7 +4,6 @@ import 'package:interview_task_vasai/features/home/widgets/custom_text_button.da
 import 'package:interview_task_vasai/features/leave_overview/screen/leave_overview.dart';
 import 'package:interview_task_vasai/helpers/dotted_divider.dart';
 import 'package:interview_task_vasai/helpers/global.dart';
-import 'package:interview_task_vasai/main.dart';
 
 class CustomBarGraph extends StatelessWidget {
   const CustomBarGraph({super.key});

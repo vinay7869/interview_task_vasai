@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/custom_holiday_tile.dart';
 import 'package:interview_task_vasai/helpers/dotted_divider.dart';
-import 'package:interview_task_vasai/main.dart';
+import 'package:interview_task_vasai/helpers/global.dart';
 
 class HolidayScreen extends StatefulWidget {
   const HolidayScreen({super.key});

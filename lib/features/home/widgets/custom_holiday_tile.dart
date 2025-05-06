@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/helpers/global.dart';
-import 'package:interview_task_vasai/main.dart';
 
 class CustomHolidayTile extends StatelessWidget {
   final String title, subtitle;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/custom_actions_tile.dart';
 import 'package:interview_task_vasai/features/raise_ticket/screen/raise_ticket_screen.dart';
-import 'package:interview_task_vasai/main.dart';
+import 'package:interview_task_vasai/helpers/global.dart';
 
 class ActionsCard extends StatelessWidget {
   const ActionsCard({super.key});

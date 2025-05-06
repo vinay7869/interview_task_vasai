@@ -3,7 +3,6 @@ import 'package:interview_task_vasai/features/raise_ticket/widgets/big_custom_te
 import 'package:interview_task_vasai/features/raise_ticket/widgets/custom_textfield.dart';
 import 'package:interview_task_vasai/features/raise_ticket/widgets/textfield_with_dropdown.dart';
 import 'package:interview_task_vasai/helpers/global.dart';
-import 'package:interview_task_vasai/main.dart';
 
 class RaiseTicketScreen extends StatefulWidget {
   const RaiseTicketScreen({super.key});
