@@ -16,6 +16,7 @@ class _RaiseTicketScreenState extends State<RaiseTicketScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),

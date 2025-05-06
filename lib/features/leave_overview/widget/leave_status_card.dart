@@ -6,6 +6,7 @@ class LeaveStatusCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.only(bottom: mq.height * .017),
       padding: EdgeInsets.symmetric(

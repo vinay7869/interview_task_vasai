@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class CustomTextButton extends StatelessWidget {
   final String title;
@@ -8,6 +7,7 @@ class CustomTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.only(right: mq.width * 0.05, top: mq.height * 0.02),
       child: InkWell(

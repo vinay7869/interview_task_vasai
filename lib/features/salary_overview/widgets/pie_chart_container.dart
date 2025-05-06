@@ -28,6 +28,7 @@ class _PieChartContainerState extends State<PieChartContainer> {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: mq.width * 0.05,

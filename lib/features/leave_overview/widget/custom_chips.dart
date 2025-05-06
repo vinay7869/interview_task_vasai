@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class CustomChips extends StatelessWidget {
   final String title;
@@ -19,6 +18,7 @@ class CustomChips extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     final Color borderColor = selected ? selectedColor : unselectedColor;
     final Color textColor = selected ? selectedColor : unselectedColor;
 

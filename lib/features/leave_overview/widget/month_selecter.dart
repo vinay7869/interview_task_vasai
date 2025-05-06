@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class MonthSelecter extends StatefulWidget {
   const MonthSelecter({super.key});
@@ -27,6 +26,7 @@ class _MonthSelecterState extends State<MonthSelecter> {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       height: mq.height * 0.04,
       width: mq.width * 0.335,

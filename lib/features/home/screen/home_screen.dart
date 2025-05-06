@@ -12,7 +12,6 @@ import 'package:interview_task_vasai/features/home/widgets/todays_attendance_car
 import 'package:interview_task_vasai/features/home/widgets/weekly_calender.dart';
 import 'package:interview_task_vasai/features/salary_overview/screen/salary_overview.dart';
 import 'package:interview_task_vasai/helpers/dotted_divider.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,6 +29,8 @@ class _HomeScreenState extends State<HomeScreen>
   late TabController _tabController;
 
   int _currentIndex = 0;
+
+  
 
   @override
   void initState() {
@@ -53,6 +54,7 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

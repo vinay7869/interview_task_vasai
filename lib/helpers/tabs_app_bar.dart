@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class TabsAppBar extends StatelessWidget {
   const TabsAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(

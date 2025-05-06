@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 import 'package:weekly_date_picker/weekly_date_picker.dart';
 
 class WeeklyCalender extends StatelessWidget {
@@ -13,6 +12,7 @@ class WeeklyCalender extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.only(bottom: 5),
       color: Colors.white,

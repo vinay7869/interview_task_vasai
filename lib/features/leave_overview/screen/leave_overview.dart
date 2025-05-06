@@ -17,6 +17,7 @@ class LeaveOverview extends StatefulWidget {
 class _LeaveOverviewState extends State<LeaveOverview> {
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),

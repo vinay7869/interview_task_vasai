@@ -39,6 +39,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       width: double.maxFinite,
       height: mq.height * .52,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/bar_graph.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class GraphCard extends StatelessWidget {
   const GraphCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.only(top: 5),
       color: Colors.white,

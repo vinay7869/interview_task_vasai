@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class CustomTabs extends StatelessWidget {
   final String title;
@@ -23,6 +22,7 @@ class CustomTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return InkWell(
       onTap: onTap,
       child: Container(

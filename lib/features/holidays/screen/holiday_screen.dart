@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_task_vasai/features/home/widgets/custom_holiday_tile.dart';
 import 'package:interview_task_vasai/helpers/dotted_divider.dart';
-import 'package:interview_task_vasai/helpers/global.dart';
 
 class HolidayScreen extends StatefulWidget {
   const HolidayScreen({super.key});
@@ -13,6 +12,7 @@ class HolidayScreen extends StatefulWidget {
 class _HolidayScreenState extends State<HolidayScreen> {
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),

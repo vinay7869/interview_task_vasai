@@ -8,6 +8,7 @@ class SalarySlipContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(vertical: mq.height * 0.02),
       color: Colors.white,

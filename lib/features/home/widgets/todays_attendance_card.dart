@@ -7,6 +7,7 @@ class TodaysAttendanceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.only(top: 5),
       color: Colors.white,

@@ -10,6 +10,7 @@ class CustomBarGraph extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context).size;
     return Column(
       children: [
         // bar graph
